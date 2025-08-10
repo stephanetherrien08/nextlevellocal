@@ -1,3 +1,14 @@
+iframe[src*="app.aminos.ai"]{
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 2147483647 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -23,4 +34,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+#lexai_container{
+  position: fixed; right: 20px; bottom: 20px; z-index: 2147483647;
+  width: 360px; max-width: 95vw; max-height: 80vh; overflow: hidden;
+  border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+@media (max-width: 480px){
+  #lexai_container{ right:10px; left:10px; width:auto; }
 }

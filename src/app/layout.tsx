@@ -10,12 +10,14 @@ export const metadata: Metadata = {
   description: 'Local visibility with AI',
 };
 
+import LexAIScript from './components/LexAIScript';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {children}
-        <LexAIScript />  {/* ← loads Aminos after hydration */}
+        <LexAIScript />
       </body>
     </html>
   );
