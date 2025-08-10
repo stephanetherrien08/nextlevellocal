@@ -11,9 +11,11 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self';",
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.aminos.ai;",
-              "connect-src 'self' https://app.aminos.ai;",
-              "img-src 'self' data: https:;",
-              "style-src 'self' 'unsafe-inline';",
+"connect-src 'self' https://app.aminos.ai wss://app.aminos.ai;",
+"frame-src https://app.aminos.ai https://*.aminos.ai;",
+"img-src 'self' data: https:;",
+"style-src 'self' 'unsafe-inline';",
+
               "font-src 'self' data: https:;",
               "frame-src https://app.aminos.ai;",
               "base-uri 'self';",
