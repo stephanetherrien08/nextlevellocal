@@ -1,15 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: '/(.*)',
         headers: [
           {
-            key: "Content-Security-Policy",
+            key: 'Content-Security-Policy',
             value: [
               "default-src 'self';",
-              // add 'unsafe-inline' here:
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.aminos.ai;",
               "connect-src 'self' https://app.aminos.ai;",
               "img-src 'self' data: https:;",
@@ -18,13 +18,15 @@ const nextConfig = {
               "frame-src https://app.aminos.ai;",
               "base-uri 'self';",
               "form-action 'self';",
-            ].join(" "),
+            ].join(' '),
           },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
       },
     ];
   },
 };
-module.exports = nextConfig;
+
+export default nextConfig;
+
