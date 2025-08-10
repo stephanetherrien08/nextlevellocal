@@ -9,7 +9,8 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self';",
-              "script-src 'self' 'unsafe-eval' https://app.aminos.ai;",
+              // add 'unsafe-inline' here:
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.aminos.ai;",
               "connect-src 'self' https://app.aminos.ai;",
               "img-src 'self' data: https:;",
               "style-src 'self' 'unsafe-inline';",
@@ -26,5 +27,4 @@ const nextConfig = {
     ];
   },
 };
-
 module.exports = nextConfig;
