@@ -14,6 +14,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
+import NavBar from './components/NavBar';
+// ...
+<body className={inter.className}>
+  <NavBar />
+  {children}
+  <LexAIWidget />
+</body>
+
         {children}
         <LexAIWidget />
       </body>
