@@ -4,7 +4,7 @@ import Script from 'next/script';
 const MODE = process.env.NEXT_PUBLIC_LEXAI_MODE ?? 'inline'; // 'inline' | 'floating'
 const BOT_ID = '52788';
 
-export default function LexAIScript() {
+export default function LexAIWidget() {
   if (MODE === 'floating') {
     return (
       <Script
@@ -14,8 +14,6 @@ export default function LexAIScript() {
       />
     );
   }
-
-  // inline mode (form) – we pin it like a floating widget with CSS
   return (
     <>
       <div id="lexai_container"><div id="chat_form" /></div>
